@@ -1,0 +1,15 @@
+<package>
+  <description brief="brics_showcase_industry_transformer">
+
+     brics_showcase_industry_transformer
+
+  </description>
+  <author>Alexander Bubeck</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/brics_showcase_industry_transformer</url>
+  <depend package="rospy"/>
+
+</package>
+
+
