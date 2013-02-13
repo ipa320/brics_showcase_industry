@@ -3,6 +3,7 @@ import roslib; roslib.load_manifest('brics_showcase_industry_worldmodel')
 import rospy
 
 # protected region customHeaders on begin #
+from geometry_msgs.msg import PoseStamped 
 # protected region customHeaders end #
 
 from brics_showcase_industry_interfaces.srv import SetObjectPose 
@@ -12,6 +13,7 @@ from brics_showcase_industry_interfaces.srv import GetObjectPose
 class si_worldmodel_impl:
 	
 	def	__init__(self):
+		self.pose = PoseStamped()
 		pass
 	
 	def	configure(self):
@@ -26,10 +28,16 @@ class si_worldmodel_impl:
 		
 	def	callback_setObjectPose(self, req):
 		# protected region user implementation of service callback for setObjectPose on begin #
+		self.pose = req.pose
+		res = SetObjectPose()
+		return res
 		# protected region user implementation of service callback for setObjectPose end #
 		pass
 	def	callback_getObjectPose(self, req):
 		# protected region user implementation of service callback for getObjectPose on begin #
+		res = GetObjectPose()
+		res.pose = self.pose
+		return res
 		# protected region user implementation of service callback for getObjectPose end #
 		pass
 	
