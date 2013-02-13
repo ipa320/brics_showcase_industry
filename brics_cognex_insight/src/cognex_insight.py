@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import roslib; roslib.load_manifest('cognex_insight')
+import roslib; roslib.load_manifest('brics_cognex_insight')
 import rospy
 
 # protected region customHeaders on begin #
