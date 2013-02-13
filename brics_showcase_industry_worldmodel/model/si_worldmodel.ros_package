@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_showcase_industry_worldmodel" author="Alexander Bubeck" description="Simple implementation of world model for showcase industry">
+  <node name="si_worldmodel">
+    <serviceServer name="setObjectPose" msg="brics_showcase_industry_interfaces::SetObjectPose"/>
+    <serviceServer name="getObjectPose" msg="brics_showcase_industry_interfaces::GetObjectPose"/>
+  </node>
+  <depend>brics_showcase_industry_interfaces</depend>
+</ros:Package>

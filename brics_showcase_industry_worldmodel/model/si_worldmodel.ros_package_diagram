@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_PzFuEHXpEeKXHN5-WJaUfg" type="RosPackage" name="si_worldmodel.ros_package_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_W82mEHXpEeKXHN5-WJaUfg" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_W83NIHXpEeKXHN5-WJaUfg" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_W830MHXpEeKXHN5-WJaUfg" type="7001">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_W830MXXpEeKXHN5-WJaUfg" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_W830MnXpEeKXHN5-WJaUfg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_W830M3XpEeKXHN5-WJaUfg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_YZlCwHXpEeKXHN5-WJaUfg" type="3002">
+      <children xmi:type="notation:DecorationNode" xmi:id="_YZmQ4HXpEeKXHN5-WJaUfg" type="5002"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_YZlCwXXpEeKXHN5-WJaUfg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_YZlCwnXpEeKXHN5-WJaUfg" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_YZlCw3XpEeKXHN5-WJaUfg"/>
+      <element xmi:type="ros:ServiceServer" href="si_worldmodel.ros_package#//@node.0/@serviceServer.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YZlCxHXpEeKXHN5-WJaUfg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_e9cYYHXpEeKXHN5-WJaUfg" type="3002">
+      <children xmi:type="notation:DecorationNode" xmi:id="_e9c_cHXpEeKXHN5-WJaUfg" type="5002"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_e9cYYXXpEeKXHN5-WJaUfg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_e9cYYnXpEeKXHN5-WJaUfg" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_e9cYY3XpEeKXHN5-WJaUfg"/>
+      <element xmi:type="ros:ServiceServer" href="si_worldmodel.ros_package#//@node.0/@serviceServer.1"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e9cYZHXpEeKXHN5-WJaUfg"/>
+    </children>
+    <element xmi:type="ros:Node" href="si_worldmodel.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_W82mEXXpEeKXHN5-WJaUfg" x="357" y="119" width="232" height="197"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_PzFuEXXpEeKXHN5-WJaUfg"/>
+  <element xmi:type="ros:Package" href="si_worldmodel.ros_package#/"/>
+</notation:Diagram>

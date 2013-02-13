@@ -1,0 +1,15 @@
+<package>
+  <description brief="brics_showcase_industry_interfaces">
+
+     brics_showcase_industry_interfaces
+
+  </description>
+  <author>Alexander Bubeck</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/brics_showcase_industry_interfaces</url>
+  <depend package="geometry_msgs"/>
+
+</package>
+
+
