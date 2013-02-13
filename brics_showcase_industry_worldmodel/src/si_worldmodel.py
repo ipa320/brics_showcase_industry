@@ -29,13 +29,14 @@ class si_worldmodel_impl:
 	def	callback_setObjectPose(self, req):
 		# protected region user implementation of service callback for setObjectPose on begin #
 		self.pose = req.pose
-		res = SetObjectPose()
+		res = SetObjectPoseResponse()
 		return res
 		# protected region user implementation of service callback for setObjectPose end #
 		pass
+
 	def	callback_getObjectPose(self, req):
 		# protected region user implementation of service callback for getObjectPose on begin #
-		res = GetObjectPose()
+		res = GetObjectPoseResponse()
 		res.pose = self.pose
 		return res
 		# protected region user implementation of service callback for getObjectPose end #
