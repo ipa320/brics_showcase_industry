@@ -6,8 +6,8 @@ import rospy
 from geometry_msgs.msg import PoseStamped 
 # protected region customHeaders end #
 
-from brics_showcase_industry_interfaces.srv import SetObjectPoseResponse, SetObjectPoseRequest 
-from brics_showcase_industry_interfaces.srv import GetObjectPoseResponse, GetObjectPoseRequest 
+from brics_showcase_industry_interfaces.srv import SetObjectPose, SetObjectPoseResponse, SetObjectPoseRequest 
+from brics_showcase_industry_interfaces.srv import GetObjectPose, GetObjectPoseResponse, GetObjectPoseRequest 
 
 
 class si_worldmodel_impl:
