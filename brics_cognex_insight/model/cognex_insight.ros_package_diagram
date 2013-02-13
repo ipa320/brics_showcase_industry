@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_ptJ40HXoEeKXHN5-WJaUfg" type="RosPackage" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_qRxBwHXoEeKXHN5-WJaUfg" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_qR1TMHXoEeKXHN5-WJaUfg" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_qR4WgHXoEeKXHN5-WJaUfg" type="7001">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_qR4WgXXoEeKXHN5-WJaUfg" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_qR4WgnXoEeKXHN5-WJaUfg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_qR4Wg3XoEeKXHN5-WJaUfg"/>
+    </children>
+    <element xmi:type="ros:Node" href="cognex_insight.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qRxBwXXoEeKXHN5-WJaUfg" x="215" y="95"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_ptJ40XXoEeKXHN5-WJaUfg"/>
+  <element xmi:type="ros:Package" href="cognex_insight.ros_package#/"/>
+</notation:Diagram>

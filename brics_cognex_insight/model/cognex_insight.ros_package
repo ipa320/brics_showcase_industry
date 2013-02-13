@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="cognex_insight" author="Alexander Bubeck" description="Camera Interface to cognex insight smartcam for pattern detection">
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_cognex_insight" author="Alexander Bubeck" description="Camera Interface to cognex insight smartcam for pattern detection">
   <node name="cognex_insight" loopRate="100.0">
     <publisher name="detected_pattern" msg="geometry_msgs::PoseArray"/>
     <parameter name="camera_ip" value="169.254.7.197" type="string"/>

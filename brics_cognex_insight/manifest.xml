@@ -1,5 +1,5 @@
 <package>
-  <description brief="cognex_insight">Camera Interface to cognex insight smartcam for pattern detection</description>
+  <description brief="brics_cognex_insight">Camera Interface to cognex insight smartcam for pattern detection</description>
   <author>Alexander Bubeck</author>
   <license></license>
   <review status="unreviewed" notes=""/>
