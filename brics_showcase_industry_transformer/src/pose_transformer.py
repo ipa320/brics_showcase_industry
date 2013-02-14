@@ -14,6 +14,8 @@ class pose_transformer_impl:
 	in_CameraDetections = PoseArray()
 	
 	def	__init__(self):
+		# protected region initCode on begin #
+		# protected region initCode end #
 		pass
 	
 	def	configure(self):

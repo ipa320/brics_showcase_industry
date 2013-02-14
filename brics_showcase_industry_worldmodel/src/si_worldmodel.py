@@ -13,6 +13,8 @@ from brics_showcase_industry_interfaces.srv import GetObjectPose, GetObjectPoseR
 class si_worldmodel_impl:
 	
 	def	__init__(self):
+		# protected region initCode on begin #
+		# protected region initCode end #
 		pass
 	
 	def	configure(self):
