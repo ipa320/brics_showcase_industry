@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" author="Alexander Bubeck" description="Transforms Positions from Camera Coordinates to Arm Coordinates">
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_showcase_industry_transformer" author="Alexander Bubeck" description="Transforms Positions from Camera Coordinates to Arm Coordinates" license="" rosdep="">
   <node name="pose_transformer">
     <subscriber name="CameraDetections" msg="geometry_msgs::PoseArray"/>
     <serviceClient name="SetObjectPose" msg="brics_showcase_industry_interfaces::SetObjectPose"/>
     <parameter name="CameraPose" value="[[0,0,0],[0,0,0,0]]" type="string"/>
-    <actionserver name="FindObjectAction"/>
+    <parameter name="MeterPerPixel" value="0.000671" type="double"/>
+    <actionserver name="FindObjectAction" ActionType="brics_showcase_industry_interfaces::FindObjects"/>
   </node>
   <depend>brics_showcase_industry_interfaces</depend>
   <depend>geometry_msgs</depend>

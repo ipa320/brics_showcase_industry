@@ -7,6 +7,10 @@
         <element xmi:type="ros:Parameter" href="pose_transformer.ros_package#//@node.0/@parameter.0"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_CnGIsXX7EeKXHN5-WJaUfg"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_cyt_cHaoEeKyRPhdSXJ1Kg" type="3001">
+        <element xmi:type="ros:Parameter" href="pose_transformer.ros_package#//@node.0/@parameter.1"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cyt_cXaoEeKyRPhdSXJ1Kg"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_TyJD8nXxEeKXHN5-WJaUfg" showTitle="true"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_TyJD83XxEeKXHN5-WJaUfg"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_TyJD9HXxEeKXHN5-WJaUfg"/>
@@ -36,7 +40,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="__XTL5HX6EeKXHN5-WJaUfg" x="301" y="105"/>
     </children>
     <element xmi:type="ros:Node" href="pose_transformer.ros_package#//@node.0"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TyIc4XXxEeKXHN5-WJaUfg" x="301" y="112" width="302" height="218"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TyIc4XXxEeKXHN5-WJaUfg" x="330" y="140" width="302" height="218"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_SX4FYXXxEeKXHN5-WJaUfg"/>
   <element xmi:type="ros:Package" href="pose_transformer.ros_package#/"/>
