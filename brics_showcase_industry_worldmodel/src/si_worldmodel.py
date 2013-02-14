@@ -14,6 +14,7 @@ class si_worldmodel_impl:
 	
 	def	__init__(self):
 		# protected region initCode on begin #
+		self.pose = PoseStamped()
 		# protected region initCode end #
 		pass
 	
