@@ -32,6 +32,7 @@ class si_worldmodel_impl:
 		# protected region user implementation of service callback for setObjectPose on begin #
 		self.pose = req.pose
 		res = SetObjectPoseResponse()
+		rospy.loginfo("new object pose set")
 		return res
 		# protected region user implementation of service callback for setObjectPose end #
 		pass

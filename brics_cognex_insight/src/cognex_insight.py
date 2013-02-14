@@ -16,8 +16,8 @@ class cognex_insight_impl:
 	config_camera_ip = "192.168.10.40"
 	config_configuration_port = 23
 	config_data_port = 50000
-	config_Pose1X_Cell = "['B',28]"
-	config_Pose1Y_Cell = "['C',28]"
+	config_Pose1X_Cell = "['C',28]"
+	config_Pose1Y_Cell = "['B',28]"
 	config_Pose1Theta_Cell = "['D',28]"
 	config_Pose2X_Cell = "['C',51]"
 	config_Pose2Y_Cell = "['D',51]"
@@ -75,6 +75,8 @@ class cognex_insight_impl:
 	
 	def	update(self):
 		# protected region updateCode on begin #
+		self.out_detected_pattern = PoseArray()
+		
 		mes = self.tnd.read_until("</Cycle>")
 		res = { 0:{}, 1:{}, 2:{}, 3:{} }
 		dom = parseString(mes)
