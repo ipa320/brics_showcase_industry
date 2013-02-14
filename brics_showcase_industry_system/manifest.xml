@@ -1,0 +1,16 @@
+<package>
+  <description brief="brics_showcase_industry"></description>
+  <author>Alexander Bubeck</author>
+  <license></license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+  
+  <depend package="brics_showcase_industry_coordinators"/>
+  <depend package="brics_showcase_industry_worldmodel"/>
+  <depend package="brics_showcase_industry_transformer"/>
+  <depend package="brics_cognex_insight"/>
+  
+  
+</package>
+
+

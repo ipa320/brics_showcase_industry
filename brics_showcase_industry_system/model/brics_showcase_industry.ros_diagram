@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_hyNEYHX8EeKXHN5-WJaUfg" type="Ros" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_RiiPAHaEEeKsY7iwtR5K3Q" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Rii2EHaEEeKsY7iwtR5K3Q" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Rii2EXaEEeKsY7iwtR5K3Q" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_xIS70HaEEeKsY7iwtR5K3Q" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_xIS70naEEeKsY7iwtR5K3Q" type="5008"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_xIS703aEEeKsY7iwtR5K3Q" type="7002">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_xIS71HaEEeKsY7iwtR5K3Q" showTitle="true"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_xIS71XaEEeKsY7iwtR5K3Q"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_xIS71naEEeKsY7iwtR5K3Q"/>
+        </children>
+        <element xmi:type="ros:Node" href="platform:/resource/brics_showcase_industry_coordinators-RelWithDebInfo@brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xIS70XaEEeKsY7iwtR5K3Q" x="445" y="8"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_xITi4HaEEeKsY7iwtR5K3Q" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_xITi4naEEeKsY7iwtR5K3Q" type="5008"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_xITi43aEEeKsY7iwtR5K3Q" type="7002">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_xITi5HaEEeKsY7iwtR5K3Q" showTitle="true"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_xITi5XaEEeKsY7iwtR5K3Q"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_xITi5naEEeKsY7iwtR5K3Q"/>
+        </children>
+        <element xmi:type="ros:Node" href="platform:/resource/brics_showcase_industry_coordinators-RelWithDebInfo@brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xITi4XaEEeKsY7iwtR5K3Q" x="370" y="288"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_xITi53aEEeKsY7iwtR5K3Q" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_xIUJ8HaEEeKsY7iwtR5K3Q" type="5008"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_xIUJ8XaEEeKsY7iwtR5K3Q" type="7002">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_xIUJ8naEEeKsY7iwtR5K3Q" showTitle="true"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_xIUJ83aEEeKsY7iwtR5K3Q"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_xIUJ9HaEEeKsY7iwtR5K3Q"/>
+        </children>
+        <element xmi:type="ros:Node" href="platform:/resource/brics_showcase_industry_coordinators-RelWithDebInfo@brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xITi6HaEEeKsY7iwtR5K3Q" x="805" y="288"/>
+      </children>
+    </children>
+    <element xmi:type="ros:Package" href="platform:/resource/brics_showcase_industry_coordinators-RelWithDebInfo@brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RiiPAXaEEeKsY7iwtR5K3Q" x="625" y="35" width="1247" height="671"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Y2mSgHaEEeKsY7iwtR5K3Q" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Y2mSgnaEEeKsY7iwtR5K3Q" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Y2m5kHaEEeKsY7iwtR5K3Q" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_Y2oHsHaEEeKsY7iwtR5K3Q" type="3001" fontName="Ubuntu">
+        <children xmi:type="notation:DecorationNode" xmi:id="_Y2ouwHaEEeKsY7iwtR5K3Q" type="5008"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_Y2ouwXaEEeKsY7iwtR5K3Q" type="7002">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_Y2ouwnaEEeKsY7iwtR5K3Q" showTitle="true"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_Y2ouw3aEEeKsY7iwtR5K3Q"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_Y2ouxHaEEeKsY7iwtR5K3Q"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_xI5_0HaEEeKsY7iwtR5K3Q" type="3007">
+          <children xmi:type="notation:DecorationNode" xmi:id="_xI5_1XaEEeKsY7iwtR5K3Q" type="5006"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_xI5_0XaEEeKsY7iwtR5K3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_xI5_0naEEeKsY7iwtR5K3Q" fontName="Ubuntu"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_xI5_03aEEeKsY7iwtR5K3Q"/>
+          <element xmi:type="ros:ServiceServer" href="platform:/resource/brics_showcase_industry_worldmodel-RelWithDebInfo@brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#//@node.0/@serviceServer.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xI5_1HaEEeKsY7iwtR5K3Q" x="-89" y="1"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_xI6m4HaEEeKsY7iwtR5K3Q" type="3007">
+          <children xmi:type="notation:DecorationNode" xmi:id="_xI6m5XaEEeKsY7iwtR5K3Q" type="5006"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_xI6m4XaEEeKsY7iwtR5K3Q"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_xI6m4naEEeKsY7iwtR5K3Q" fontName="Ubuntu"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_xI6m43aEEeKsY7iwtR5K3Q"/>
+          <element xmi:type="ros:ServiceServer" href="platform:/resource/brics_showcase_industry_worldmodel-RelWithDebInfo@brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#//@node.0/@serviceServer.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xI6m5HaEEeKsY7iwtR5K3Q" x="239" y="49"/>
+        </children>
+        <element xmi:type="ros:Node" href="platform:/resource/brics_showcase_industry_worldmodel-RelWithDebInfo@brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#//@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y2oHsXaEEeKsY7iwtR5K3Q" x="6" y="14"/>
+      </children>
+    </children>
+    <element xmi:type="ros:Package" href="platform:/resource/brics_showcase_industry_worldmodel-RelWithDebInfo@brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y2mSgXaEEeKsY7iwtR5K3Q" x="75" y="330" width="647" height="471"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_eOdIAHaEEeKsY7iwtR5K3Q" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_eOdIAnaEEeKsY7iwtR5K3Q" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_eOdIA3aEEeKsY7iwtR5K3Q" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource/cognex_insight/model/cognex_insight.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eOdIAXaEEeKsY7iwtR5K3Q" x="50" y="840" width="901"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_JM3vIHaFEeKsY7iwtR5K3Q" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_JM3vInaFEeKsY7iwtR5K3Q" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_JM3vI3aFEeKsY7iwtR5K3Q" type="7001"/>
+    <element xmi:type="ros:Package" href="platform:/resource/brics_showcase_industry_transformer-RelWithDebInfo@brics_showcase_industry_transformer/model/pose_transformer.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JM3vIXaFEeKsY7iwtR5K3Q" x="750" y="725" width="447" height="521"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_hyNEYXX8EeKXHN5-WJaUfg"/>
+  <element xmi:type="ros:Architecture" href="brics_showcase_industry.ros#/"/>
+</notation:Diagram>
