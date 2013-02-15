@@ -37,15 +37,21 @@ class coordinator_pickup_impl:
 		self.pshome.pose.position.y = 0.157
 		self.pshome.pose.position.z = 0.443
 
+		self.detection_counter = 0
 		# protected region initCode end #
 		pass
 
 	def getposecb(self, a, b):
 		print "Setting Pose based on world model"
 
-		if((rospy.Time.now().to_sec() - b.pose.header.stamp.to_sec()) > 3.0):
-			print "Time stamp of detection to old"
-			return "aborted"
+		if((rospy.Time.now().to_sec() - b.pose.header.stamp.to_sec()) > 4.0):
+			print "Time stamp of detection to old: ", (rospy.Time.now().to_sec() - b.pose.header.stamp.to_sec())
+			if(self.detection_counter <= 4):
+				self.detection_counter += 1
+				return "preempted"
+			else:
+				self.detection_counter = 0
+				return "aborted"
 
 		self.ps.header.stamp = rospy.Time.now()
 		self.ps.pose.position.x = b.pose.pose.position.x
@@ -66,11 +72,11 @@ class coordinator_pickup_impl:
 		sis = smach_ros.IntrospectionServer('coordinator_pickup', sm0, '/pickup_sm')
 		sis.start()
 		with sm0:
-			smach.StateMachine.add('GET_POSE_FROM_WORLDMODEL', smach_ros.ServiceState('/getObjectPose', GetObjectPose, response_cb=self.getposecb), transitions={'succeeded':'MOVE_OVER_BOX', 'aborted':'aborted'})
+			smach.StateMachine.add('GET_POSE_FROM_WORLDMODEL', smach_ros.ServiceState('/getObjectPose', GetObjectPose, response_cb=self.getposecb), transitions={'succeeded':'MOVE_OVER_BOX', 'aborted':'aborted', 'preempted': 'GET_POSE_FROM_WORLDMODEL'})
 			smach.StateMachine.add('MOVE_OVER_BOX', smach_ros.SimpleActionState('MoveArmCart', MoveArmCartAction, goal = MoveArmCartGoal(pose_goal=self.ps)), {'succeeded':'MOVE_DOWN'})
 			smach.StateMachine.add('MOVE_DOWN', smach_ros.SimpleActionState('MoveArmCart', MoveArmCartAction, goal = MoveArmCartGoal(pose_goal=self.ps2)), {'succeeded':'MOVE_UP'})
-			smach.StateMachine.add('MOVE_UP', smach_ros.SimpleActionState('MoveArmCart', MoveArmCartAction, goal = MoveArmCartGoal(pose_goal=self.ps)), {'succeeded':'MOVE_HOME'})
-			smach.StateMachine.add('MOVE_HOME', smach_ros.SimpleActionState('MoveArmCart', MoveArmCartAction, goal = MoveArmCartGoal(pose_goal=self.pshome)), {'succeeded':'succeeded'})
+			smach.StateMachine.add('MOVE_UP', smach_ros.SimpleActionState('MoveArmCart', MoveArmCartAction, goal = MoveArmCartGoal(pose_goal=self.ps)), {'succeeded':'succeeded'})
+			#smach.StateMachine.add('MOVE_HOME', smach_ros.SimpleActionState('MoveArmCart', MoveArmCartAction, goal = MoveArmCartGoal(pose_goal=self.pshome)), {'succeeded':'succeeded'})
 		# Execute SMACH plan
 		ActionServerWrapper(
         	'pick_up',

@@ -16,25 +16,13 @@
 	</node>
 	
 	<node pkg="brics_showcase_industry_transformer" type="pose_transformer" name="pose_transformer" output="screen">
-		<param name="CameraPose" value="[[0,0,0],[0,0,0,0]]"/>
 	</node>
 	
 	<node pkg="brics_cognex_insight" type="cognex_insight" name="cognex_insight" output="screen">
-		<param name="camera_ip" value="169.254.7.197"/>
-		<param name="configuration_port" value="23"/>
-		<param name="data_port" value="50000"/>
-		<param name="Pose1X_Cell" value="['C',50]"/>
-		<param name="Pose1Y_Cell" value="['D',50]"/>
-		<param name="Pose1Theta_Cell" value="['E',50]"/>
-		<param name="Pose2X_Cell" value="['C',51]"/>
-		<param name="Pose2Y_Cell" value="['D',51]"/>
-		<param name="Pose2Theta_Cell" value="['E',51]"/>
-		<param name="Pose3X_Cell" value="['C',52]"/>
-		<param name="Pose3Y_Cell" value="['D',52]"/>
-		<param name="Pose3Theta_Cell" value="['E',52]"/>
 	</node>
 	
-
+	<node pkg="cob_kuka_xmlkrc" type="cob_kuka_xmlkrc" name="cob_kuka_xmlkrc" output="screen" cwd="node">
+	</node>
 <!-- protected region additional custom Launchfile statements in the end of launch file on begin -->
 <!-- protected region additional custom Launchfile statements in the end of launch file end -->
 

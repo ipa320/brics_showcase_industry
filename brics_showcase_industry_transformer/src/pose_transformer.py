@@ -6,6 +6,7 @@ import rospy
 from geometry_msgs.msg import PoseStamped, Pose
 from brics_showcase_industry_interfaces.srv import SetObjectPose, SetObjectPoseRequest
 import copy
+import time
 # protected region customHeaders end #
 
 from geometry_msgs.msg import PoseArray 
@@ -25,6 +26,7 @@ class pose_transformer_impl:
 		self.camera_base_link_offset_X = -0.22 # meter (x-axis camera_base_link pointing same direction as base_link)
 		self.camera_base_link_offset_Y = -1.06 # meter (y-axis camera_base_link pointing oposite direction as base_link)
 		self.out_CameraDetections = PoseArray()
+		self.received_something = False
 		# protected region initCode end #
 		pass
 	
@@ -72,6 +74,10 @@ class pose_transformer_impl:
 
 		res = FindObjectResponse()
 		
+		# check if detection is available
+		while(len(self.in_CameraDetections.poses) <= 0):
+			time.sleep(0.1)
+
 		# writing pose to world model
 		try:
 			rospy.wait_for_service('setObjectPose', 1)
