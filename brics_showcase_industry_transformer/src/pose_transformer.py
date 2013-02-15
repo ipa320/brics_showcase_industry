@@ -19,8 +19,10 @@ class pose_transformer_impl:
 	def	__init__(self):
 		# protected region initCode on begin #
 		self.worldmodel_client = rospy.ServiceProxy('setObjectPose', SetObjectPose)
-		self.config_ResolutionX = 1600.0
-		self.config_ResolutionY = 1200.0
+		self.config_ResolutionX = 1600.0 # pixel
+		self.config_ResolutionY = 1200.0 # pixel
+		self.camera_base_link_offset_X = -0.22 # meter (x-axis camera_base_link pointing same direction as base_link)
+		self.camera_base_link_offset_Y = -1.00 # meter (y-axis camera_base_link pointing oposite direction as base_link)
 		# protected region initCode end #
 		pass
 	
@@ -33,37 +35,46 @@ class pose_transformer_impl:
 		# protected region updateCode on begin #
 		in_CameraDetections = copy.deepcopy(self.in_CameraDetections)
 		
+		# check if detection is available
 		if len(in_CameraDetections.poses) <= 0:
 			return
-			
-		out_CameraDetections = PoseArray()
+		
+		# do transformation from pixel coords to camera_base_link coords in meter
+		out1_CameraDetections = PoseArray()
 		for pose in in_CameraDetections.poses:
-			print pose.position.x , pose.position.y
-			print pose.position.x - self.config_ResolutionX/2.0, pose.position.y - self.config_ResolutionY/2.0
 			new_pose = Pose()
 			new_pose.position.x = (pose.position.x - self.config_ResolutionX/2.0) * self.config_MeterPerPixel
 			new_pose.position.y = (pose.position.y - self.config_ResolutionY/2.0) * self.config_MeterPerPixel
 			new_pose.position.z = 0.0
 			new_pose.orientation = pose.orientation
+			out1_CameraDetections.poses.append(new_pose)
+		
+		# do transformation from camera_base_link to robot base_link
+		out_CameraDetections = PoseArray()
+		for pose in out1_CameraDetections.poses:
+			new_pose = Pose()
+			new_pose.position.x = pose.position.x + self.camera_base_link_offset_X
+			new_pose.position.y = pose.position.y + self.camera_base_link_offset_Y
+			new_pose.position.z = 0.0
+			new_pose.orientation = pose.orientation # TODO: rotate 180deg around x-axis
 			out_CameraDetections.poses.append(new_pose)
-		
-		print out_CameraDetections
-		
 
+		# writing pose to world model
 		try:
-			rospy.wait_for_service('setObjectPose', 5)
+			rospy.wait_for_service('setObjectPose', 1)
 		except rospy.ROSException, e:
 			print "%s"%e
 			return
-
 		try:
 			req = SetObjectPoseRequest()
-			req.pose.header.stamp = rospy.Time.now() ## HACK: filling timestamp here because no one is assigned by detection node
-			req.pose.header.frame_id = "/camera_base_link"
+			req.pose.header.stamp = out_CameraDetections.header.stamp
+			req.pose.header.frame_id = "/base_link"
 			req.pose.pose = out_CameraDetections.poses[0] ## HACK: only using first pose
 			res = self.worldmodel_client(req)
 		except rospy.ServiceException, e:
 			print "Service call failed: %s"%e
+			return
+		rospy.loginfo("new pose set")
 		# protected region updateCode end #
 		pass
 		
