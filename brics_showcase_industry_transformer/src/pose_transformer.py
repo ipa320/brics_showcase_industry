@@ -24,6 +24,7 @@ class pose_transformer_impl:
 		self.config_ResolutionY = 1200.0 # pixel
 		self.camera_base_link_offset_X = -0.22 # meter (x-axis camera_base_link pointing same direction as base_link)
 		self.camera_base_link_offset_Y = -1.06 # meter (y-axis camera_base_link pointing oposite direction as base_link)
+		self.out_CameraDetections = PoseArray()
 		# protected region initCode end #
 		pass
 	
@@ -62,27 +63,41 @@ class pose_transformer_impl:
 			new_pose.orientation = pose.orientation # TODO: rotate 180deg around x-axis
 			out_CameraDetections.poses.append(new_pose)
 
-		# writing pose to world model TODO: only write if action is called by coordinator
-		try:
-			rospy.wait_for_service('setObjectPose', 1)
-		except rospy.ROSException, e:
-			print "%s"%e
-			return
-		try:
-			req = SetObjectPoseRequest()
-			req.pose.header.stamp = out_CameraDetections.header.stamp
-			req.pose.header.frame_id = "/base_link"
-			req.pose.pose = out_CameraDetections.poses[0] ## HACK: only using first pose
-			res = self.worldmodel_client(req)
-		except rospy.ServiceException, e:
-			print "Service call failed: %s"%e
-			return
-		rospy.loginfo("new pose sent to world model")
+		self.out_CameraDetections = out_CameraDetections
 		# protected region updateCode end #
 		pass
 		
 	def	callback_find_object(self, req):
 		# protected region user implementation of service callback for find_object on begin #
+
+		res = FindObjectResponse()
+		
+		# writing pose to world model
+		try:
+			rospy.wait_for_service('setObjectPose', 1)
+		except rospy.ROSException, e:
+			print "%s"%e
+			res.success = False
+			return res
+		try:
+			req = SetObjectPoseRequest()
+			req.pose.header.stamp = self.out_CameraDetections.header.stamp
+			req.pose.header.frame_id = "/base_link"
+			if len(self.out_CameraDetections.poses) <= 0:
+				print "no detection result so far"
+				res.success = False
+				return res				
+			req.pose.pose = self.out_CameraDetections.poses[0] ## HACK: only using first pose
+			res_world_model = self.worldmodel_client(req)
+		except rospy.ServiceException, e:
+			print "Service call failed: %s"%e
+			res.success = False
+			return res
+		rospy.loginfo("new pose sent to world model")
+
+
+		res.success = True
+		return res
 		# protected region user implementation of service callback for find_object end #
 		pass
 
