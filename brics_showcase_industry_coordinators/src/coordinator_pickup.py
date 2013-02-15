@@ -23,18 +23,18 @@ class coordinator_pickup_impl:
 		self.pshome = PoseStamped()
 		self.ps.header.stamp = rospy.Time.now()
 		self.ps.pose.position.x = 0.0
-		self.ps.pose.position.y = -700.0
-		self.ps.pose.position.z = 443.0
+		self.ps.pose.position.y = -0.7
+		self.ps.pose.position.z = 0.443
 
 		self.ps2.header.stamp = rospy.Time.now()
 		self.ps2.pose.position.x = 0.0
-		self.ps2.pose.position.y = -700.0
-		self.ps2.pose.position.z = 403.0
+		self.ps2.pose.position.y = -0.7
+		self.ps2.pose.position.z = 0.403
 
 		self.pshome.header.stamp = rospy.Time.now()
-		self.pshome.pose.position.x = 366.0
-		self.pshome.pose.position.y = 157.0
-		self.pshome.pose.position.z = 443.0
+		self.pshome.pose.position.x = 0.366
+		self.pshome.pose.position.y = 0.157
+		self.pshome.pose.position.z = 0.443
 
 		# protected region initCode end #
 		pass
@@ -47,14 +47,14 @@ class coordinator_pickup_impl:
 			return "aborted"
 
 		self.ps.header.stamp = rospy.Time.now()
-		self.ps.pose.position.x = b.pose.pose.position.x*1000.0
-		self.ps.pose.position.y = b.pose.pose.position.y*1000.0
-		self.ps.pose.position.z = 343.0
+		self.ps.pose.position.x = b.pose.pose.position.x
+		self.ps.pose.position.y = b.pose.pose.position.y
+		self.ps.pose.position.z = 0.343
 
 		self.ps2.header.stamp = rospy.Time.now()
-		self.ps2.pose.position.x = b.pose.pose.position.x*1000.0
-		self.ps2.pose.position.y = b.pose.pose.position.y*1000.0
-		self.ps2.pose.position.z = 153.0
+		self.ps2.pose.position.x = b.pose.pose.position.x
+		self.ps2.pose.position.y = b.pose.pose.position.y
+		self.ps2.pose.position.z = 0.153
 
 
 	def	configure(self):
@@ -72,6 +72,9 @@ class coordinator_pickup_impl:
 			smach.StateMachine.add('MOVE_HOME', smach_ros.SimpleActionState('MoveArmCart', MoveArmCartAction, goal = MoveArmCartGoal(pose_goal=self.pshome)), {'succeeded':'succeeded'})
 		# Execute SMACH plan
 		outcome = sm0.execute()
+
+		
+
 		# protected region configureCode end #
 		pass
 	
