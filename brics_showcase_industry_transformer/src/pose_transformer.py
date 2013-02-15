@@ -22,7 +22,7 @@ class pose_transformer_impl:
 		self.config_ResolutionX = 1600.0 # pixel
 		self.config_ResolutionY = 1200.0 # pixel
 		self.camera_base_link_offset_X = -0.22 # meter (x-axis camera_base_link pointing same direction as base_link)
-		self.camera_base_link_offset_Y = -1.00 # meter (y-axis camera_base_link pointing oposite direction as base_link)
+		self.camera_base_link_offset_Y = -1.06 # meter (y-axis camera_base_link pointing oposite direction as base_link)
 		# protected region initCode end #
 		pass
 	
@@ -50,13 +50,15 @@ class pose_transformer_impl:
 			new_pose.orientation = pose.orientation
 			out1_CameraDetections.poses.append(new_pose)
 		
+		print out1_CameraDetections
+		
 		# do transformation from camera_base_link to robot base_link
 		out_CameraDetections = PoseArray()
 		out_CameraDetections.header = out1_CameraDetections.header
 		for pose in out1_CameraDetections.poses:
 			new_pose = Pose()
-			new_pose.position.x = pose.position.x + self.camera_base_link_offset_X
-			new_pose.position.y = pose.position.y + self.camera_base_link_offset_Y
+			new_pose.position.x = self.camera_base_link_offset_X + pose.position.x
+			new_pose.position.y = self.camera_base_link_offset_Y - pose.position.y
 			new_pose.position.z = 0.0
 			new_pose.orientation = pose.orientation # TODO: rotate 180deg around x-axis
 			out_CameraDetections.poses.append(new_pose)
@@ -76,7 +78,7 @@ class pose_transformer_impl:
 		except rospy.ServiceException, e:
 			print "Service call failed: %s"%e
 			return
-		rospy.loginfo("new pose set")
+		rospy.loginfo("new pose sent to world model")
 		# protected region updateCode end #
 		pass
 		
