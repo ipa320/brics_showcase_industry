@@ -1,5 +1,4 @@
 ## if an object is found the current pose is written to the world model, otherwise return success = False
-
 #empty request
---
+---
 bool success
