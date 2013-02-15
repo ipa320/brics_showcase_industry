@@ -10,6 +10,8 @@ import rospy
 class coordinator_application_impl:
 	
 	def	__init__(self):
+		# protected region initCode on begin #
+		# protected region initCode end #
 		pass
 	
 	def	configure(self):
