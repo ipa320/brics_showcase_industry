@@ -103,7 +103,7 @@ class cognex_insight_impl:
 			try:
 				val = float(c.getElementsByTagName("Float")[0].childNodes[0].data)
 			except:
-				continue
+				return
 			if c.attributes['Id'].value == p1x:
 				res[0]['x']=val
 			elif c.attributes['Id'].value == p1y:
@@ -138,6 +138,7 @@ class cognex_insight_impl:
 				p.orientation.z = q[2]
 				p.orientation.w = q[3]
 				self.out_detected_pattern.poses.append(p)
+		self.out_detected_pattern.header.stamp = rospy.Time.now()
 		# protected region updateCode end #
 		pass
 		
