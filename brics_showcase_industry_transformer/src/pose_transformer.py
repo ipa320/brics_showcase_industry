@@ -50,8 +50,6 @@ class pose_transformer_impl:
 			new_pose.orientation = pose.orientation
 			out1_CameraDetections.poses.append(new_pose)
 		
-		print out1_CameraDetections
-		
 		# do transformation from camera_base_link to robot base_link
 		out_CameraDetections = PoseArray()
 		out_CameraDetections.header = out1_CameraDetections.header
