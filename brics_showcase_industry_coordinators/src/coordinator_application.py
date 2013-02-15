@@ -19,8 +19,7 @@ class coordinator_application_impl:
 		# protected region initCode on begin #
 
 		sm0 = smach.StateMachine(outcomes=['succeeded','aborted','preempted'])
-		sis = smach_ros.IntrospectionServer('coordinator_application', sm0, '/SM_ROOT')
-		sis.start()
+		sis = smach_ros.IntrospectionServer('coordinator_application', sm0, '/application_sm')
 		sis.start()
 		with sm0:
 			smach.StateMachine.add('PICKUP_OBJECT', smach_ros.SimpleActionState('pick_up', PickUpAction), {'succeeded':'succeeded'})

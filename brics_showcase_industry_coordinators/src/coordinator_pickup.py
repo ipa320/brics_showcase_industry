@@ -62,8 +62,8 @@ class coordinator_pickup_impl:
 		# protected region configureCode on begin #
 		# Create a SMACH state machine
 		
-		sm0 = smach.StateMachine(outcomes=['succeeded','aborted','preempted'])
-		sis = smach_ros.IntrospectionServer('coordinator_pickup', sm0, '/SM_ROOT')
+		sm0 = smach.StateMachine(outcomes=['succeeded','aborted','preempted'], input_keys = ['action_feedback'], output_keys = ['action_feedback'])
+		sis = smach_ros.IntrospectionServer('coordinator_pickup', sm0, '/pickup_sm')
 		sis.start()
 		with sm0:
 			smach.StateMachine.add('GET_POSE_FROM_WORLDMODEL', smach_ros.ServiceState('/getObjectPose', GetObjectPose, response_cb=self.getposecb), transitions={'succeeded':'MOVE_OVER_BOX', 'aborted':'aborted'})
@@ -76,9 +76,9 @@ class coordinator_pickup_impl:
         	'pick_up',
         	PickUpAction,
         	wrapped_container = sm0,
-        	succeeded_outcomes = ['success'],
-        	aborted_outcomes = ['fail', 'aborted'],
-        	preempted_outcomes = [],
+        	succeeded_outcomes = ['succeeded'],
+        	aborted_outcomes = ['aborted'],
+        	preempted_outcomes = ['preempted'],
 			).run_server()
 
 		
