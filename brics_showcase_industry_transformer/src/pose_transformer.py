@@ -9,6 +9,7 @@ import copy
 # protected region customHeaders end #
 
 from geometry_msgs.msg import PoseArray 
+from brics_showcase_industry_interfaces.srv import FindObject, FindObjectResponse, FindObjectRequest 
 
 
 class pose_transformer_impl:
@@ -80,12 +81,18 @@ class pose_transformer_impl:
 		# protected region updateCode end #
 		pass
 		
+	def	callback_find_object(self, req):
+		# protected region user implementation of service callback for find_object on begin #
+		# protected region user implementation of service callback for find_object end #
+		pass
+
 	
 
 class pose_transformer:
 	def __init__(self):
 		self.impl = pose_transformer_impl()
 		self.CameraDetections = rospy.Subscriber("/detected_pattern",PoseArray, self.CameraDetectionsCallback, queue_size=1) 
+		find_object_ = rospy.Service('find_object', FindObject, self.impl.callback_find_object)
 
 	def CameraDetectionsCallback(self, a):
 		self.impl.in_CameraDetections = a

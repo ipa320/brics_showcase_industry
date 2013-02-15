@@ -3,9 +3,9 @@
   <node name="pose_transformer">
     <subscriber name="CameraDetections" msg="geometry_msgs::PoseArray"/>
     <serviceClient name="SetObjectPose" msg="brics_showcase_industry_interfaces::SetObjectPose"/>
+    <serviceServer name="find_object" msg="brics_showcase_industry_interfaces::FindObject"/>
     <parameter name="CameraPose" value="[[0,0,0],[0,0,0,0]]" type="string"/>
     <parameter name="MeterPerPixel" value="0.000671" type="double"/>
-    <actionserver name="FindObjectAction" ActionType="brics_showcase_industry_interfaces::FindObjects"/>
   </node>
   <depend>brics_showcase_industry_interfaces</depend>
   <depend>geometry_msgs</depend>
