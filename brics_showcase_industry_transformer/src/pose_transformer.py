@@ -41,6 +41,7 @@ class pose_transformer_impl:
 		
 		# do transformation from pixel coords to camera_base_link coords in meter
 		out1_CameraDetections = PoseArray()
+		out1_CameraDetections.header = in_CameraDetections.header
 		for pose in in_CameraDetections.poses:
 			new_pose = Pose()
 			new_pose.position.x = (pose.position.x - self.config_ResolutionX/2.0) * self.config_MeterPerPixel
@@ -51,6 +52,7 @@ class pose_transformer_impl:
 		
 		# do transformation from camera_base_link to robot base_link
 		out_CameraDetections = PoseArray()
+		out_CameraDetections.header = out1_CameraDetections.header
 		for pose in out1_CameraDetections.poses:
 			new_pose = Pose()
 			new_pose.position.x = pose.position.x + self.camera_base_link_offset_X
@@ -59,7 +61,7 @@ class pose_transformer_impl:
 			new_pose.orientation = pose.orientation # TODO: rotate 180deg around x-axis
 			out_CameraDetections.poses.append(new_pose)
 
-		# writing pose to world model
+		# writing pose to world model TODO: only write if action is called by coordinator
 		try:
 			rospy.wait_for_service('setObjectPose', 1)
 		except rospy.ROSException, e:
@@ -83,7 +85,7 @@ class pose_transformer_impl:
 class pose_transformer:
 	def __init__(self):
 		self.impl = pose_transformer_impl()
-		self.CameraDetections = rospy.Subscriber("/detected_pattern",PoseArray, self.CameraDetectionsCallback) 
+		self.CameraDetections = rospy.Subscriber("/detected_pattern",PoseArray, self.CameraDetectionsCallback, queue_size=1) 
 
 	def CameraDetectionsCallback(self, a):
 		self.impl.in_CameraDetections = a
