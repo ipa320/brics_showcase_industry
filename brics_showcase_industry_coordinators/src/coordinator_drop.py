@@ -3,6 +3,13 @@ import roslib; roslib.load_manifest('brics_showcase_industry_coordinators')
 import rospy
 
 # protected region customHeaders on begin #
+import smach
+import smach_ros
+import time
+from brics_showcase_industry_interfaces.msg import MoveArmCartAction, MoveArmCartGoal
+from actionlib import *
+from actionlib.msg import *
+from geometry_msgs.msg import PoseStamped
 # protected region customHeaders end #
 
 

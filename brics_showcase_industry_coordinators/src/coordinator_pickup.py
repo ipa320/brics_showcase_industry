@@ -6,10 +6,11 @@ import rospy
 import smach
 import smach_ros
 import time
-from brics_showcase_industry_interfaces.msg import MoveArmCartAction, MoveArmCartGoal
+from brics_showcase_industry_interfaces.msg import PickUpAction, MoveArmCartAction, MoveArmCartGoal
 from brics_showcase_industry_interfaces.srv import GetObjectPose
 from actionlib import *
 from actionlib.msg import *
+from smach_ros import ActionServerWrapper
 from geometry_msgs.msg import PoseStamped
 
 # protected region customHeaders end #
@@ -71,7 +72,14 @@ class coordinator_pickup_impl:
 			smach.StateMachine.add('MOVE_UP', smach_ros.SimpleActionState('MoveArmCart', MoveArmCartAction, goal = MoveArmCartGoal(pose_goal=self.ps)), {'succeeded':'MOVE_HOME'})
 			smach.StateMachine.add('MOVE_HOME', smach_ros.SimpleActionState('MoveArmCart', MoveArmCartAction, goal = MoveArmCartGoal(pose_goal=self.pshome)), {'succeeded':'succeeded'})
 		# Execute SMACH plan
-		outcome = sm0.execute()
+		ActionServerWrapper(
+        	'pick_up',
+        	PickUpAction,
+        	wrapped_container = sm0,
+        	succeeded_outcomes = ['success'],
+        	aborted_outcomes = ['fail', 'aborted'],
+        	preempted_outcomes = [],
+			).run_server()
 
 		
 
