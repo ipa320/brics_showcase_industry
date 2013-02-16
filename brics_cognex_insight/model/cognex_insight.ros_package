@@ -17,4 +17,7 @@
   </node>
   <depend>geometry_msgs</depend>
   <depend>tf</depend>
+  <topic name="detect_patterns" publisher="//@node.0/@publisher.0">
+    <subscriber href="../../brics_showcase_industry_transformer/model/pose_transformer.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
 </ros:Package>

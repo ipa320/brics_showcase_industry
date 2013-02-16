@@ -3,10 +3,13 @@
   <node name="pose_transformer">
     <subscriber name="CameraDetections" msg="geometry_msgs::PoseArray"/>
     <serviceClient name="SetObjectPose" msg="brics_showcase_industry_interfaces::SetObjectPose"/>
-    <serviceServer name="find_object" msg="brics_showcase_industry_interfaces::FindObject"/>
     <parameter name="CameraPose" value="[[0,0,0],[0,0,0,0]]" type="string"/>
     <parameter name="MeterPerPixel" value="0.000671" type="double"/>
+    <actionserver name="FindObject"/>
   </node>
   <depend>brics_showcase_industry_interfaces</depend>
   <depend>geometry_msgs</depend>
+  <action name="find_object" actionserver="//@node.0/@actionserver.0">
+    <actionclient href="../../brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.0/@actionclient.2"/>
+  </action>
 </ros:Package>

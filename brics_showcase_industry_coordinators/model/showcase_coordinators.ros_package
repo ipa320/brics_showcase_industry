@@ -18,4 +18,6 @@
     <actionclient name="MoveArmCartActionClient"/>
   </node>
   <depend>brics_showcase_industry_interfaces</depend>
+  <action name="pick_up" actionserver="//@node.1/@actionserver.0" actionclient="//@node.0/@actionclient.0"/>
+  <action name="drop_down" actionserver="//@node.2/@actionserver.0" actionclient="//@node.0/@actionclient.1"/>
 </ros:Package>
