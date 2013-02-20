@@ -5,7 +5,7 @@
     <actionserver name="MoveArmCart" ActionType="brics_showcase_industry_interfaces::MoveArmCartAction"/>
     <actionclient name="FollowJointTrajectory"/>
   </node>
-  <depend>controller_msgs</depend>
   <depend>brics_showcase_industry_interfaces</depend>
   <depend>kinematics_msgs</depend>
+  <depend>control_msgs</depend>
 </ros:Package>
