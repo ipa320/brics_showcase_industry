@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_showcase_industry_coordinators" author="Alexander Bubeck" description="Coordinator components for showcase industry">
+  <node name="coordinator_application">
+    <actionclient name="PickupActionClient"/>
+    <actionclient name="DropActionClient"/>
+    <actionclient name="FindObjectsAction"/>
+  </node>
+  <node name="coordinator_pickup">
+    <serviceClient name="getObjectPose"/>
+    <actionserver name="PickupActionServer"/>
+    <actionclient name="GripperActionClient"/>
+    <actionclient name="MoveArmCartActionClient"/>
+  </node>
+  <node name="coordinator_drop">
+    <serviceClient name="getObjectPose"/>
+    <actionserver name="DropActionServer"/>
+    <actionclient name="GripperActionClient"/>
+    <actionclient name="MoveArmCartActionClient"/>
+  </node>
+  <depend>brics_showcase_industry_interfaces</depend>
+  <action name="pick_up" actionserver="//@node.1/@actionserver.0" actionclient="//@node.0/@actionclient.0"/>
+  <action name="drop_down" actionserver="//@node.2/@actionserver.0" actionclient="//@node.0/@actionclient.1"/>
+</ros:Package>

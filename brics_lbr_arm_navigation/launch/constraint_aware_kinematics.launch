@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='ASCII'?>
+<launch>
+  <include file="$(find brics_lbr_arm_navigation)/launch/brics_lbr_planning_environment.launch"/>
+  <node pkg="arm_kinematics_constraint_aware" type="arm_kinematics_constraint_aware" name="brics_lbr_arm_kinematics">
+    <param name="group" type="string" value="arm"/>
+    <param name="arm/root_name" type="string" value="base_link"/>
+    <param name="arm/tip_name" type="string" value="arm_7_link"/>
+    <param name="kinematics_solver" type="string" value="brics_lbr_arm_kinematics/IKFastKinematicsPlugin"/>
+    <param name="OLDkinematics_solver" type="string" value="arm_kinematics_constraint_aware/KDLArmKinematicsPlugin"/>
+  </node>
+</launch>

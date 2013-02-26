@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find brics_lbr_arm_navigation)/launch/brics_lbr_planning_environment.launch" />
+    <node pkg="ompl_ros_interface" type="ompl_ros" name="ompl_planning">
+        <param name="default_planner_config" type="string" value="SBLkConfig1" />
+        <rosparam command="load" file="$(find brics_lbr_arm_navigation)/config/ompl_planning.yaml" />
+    </node>
+</launch>

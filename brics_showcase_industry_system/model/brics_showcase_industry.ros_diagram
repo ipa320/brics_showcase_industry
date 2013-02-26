@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_uHrCUHgXEeKTboel5B9jCw" type="Ros" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_uKAkoHgXEeKTboel5B9jCw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uKAkongXEeKTboel5B9jCw" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uKAko3gXEeKTboel5B9jCw" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_uKDn8HgXEeKTboel5B9jCw" type="3001" fontName="Lucida Grande">
+        <children xmi:type="notation:DecorationNode" xmi:id="_uKGrQHgXEeKTboel5B9jCw" type="5008"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_uKGrQXgXEeKTboel5B9jCw" type="7002">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_uKGrQngXEeKTboel5B9jCw" showTitle="true"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_uKGrQ3gXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_uKGrRHgXEeKTboel5B9jCw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uKJukHgXEeKTboel5B9jCw" type="3006">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uKJulXgXEeKTboel5B9jCw" type="5005"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uKJukXgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uKJukngXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uKJuk3gXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ActionClient" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.0/@actionclient.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKJulHgXEeKTboel5B9jCw" x="-100" y="112"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uKKVoHgXEeKTboel5B9jCw" type="3006">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uKKVpXgXEeKTboel5B9jCw" type="5005"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uKKVoXgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uKKVongXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uKKVo3gXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ActionClient" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.0/@actionclient.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKKVpHgXEeKTboel5B9jCw" x="239" y="112"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uKKVpngXEeKTboel5B9jCw" type="3006">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uKKVq3gXEeKTboel5B9jCw" type="5005"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uKKVp3gXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uKKVqHgXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uKKVqXgXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ActionClient" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.0/@actionclient.2"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKKVqngXEeKTboel5B9jCw" x="-98" y="28"/>
+        </children>
+        <element xmi:type="ros:Node" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKDn8XgXEeKTboel5B9jCw" x="375" y="10"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_uKHSUHgXEeKTboel5B9jCw" type="3001" fontName="Lucida Grande">
+        <children xmi:type="notation:DecorationNode" xmi:id="_uKHSUngXEeKTboel5B9jCw" type="5008"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_uKHSU3gXEeKTboel5B9jCw" type="7002">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_uKHSVHgXEeKTboel5B9jCw" showTitle="true"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_uKHSVXgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_uKHSVngXEeKTboel5B9jCw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uKUGoHgXEeKTboel5B9jCw" type="3005">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uKUtsHgXEeKTboel5B9jCw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uKUGoXgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uKUGongXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uKUGo3gXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ActionServer" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.1/@actionserver.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKUGpHgXEeKTboel5B9jCw" x="-102" y="-41"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uKUtsXgXEeKTboel5B9jCw" type="3006">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uKUttngXEeKTboel5B9jCw" type="5005"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uKUtsngXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uKUts3gXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uKUttHgXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ActionClient" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.1/@actionclient.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKUttXgXEeKTboel5B9jCw" x="-1" y="-41"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uKUtt3gXEeKTboel5B9jCw" type="3006">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uKVUwHgXEeKTboel5B9jCw" type="5005"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uKUtuHgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uKUtuXgXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uKUtungXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ActionClient" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.1/@actionclient.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKUtu3gXEeKTboel5B9jCw" x="1" y="-39"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uKVUwXgXEeKTboel5B9jCw" type="3008">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uKVUxngXEeKTboel5B9jCw" type="5007"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uKVUwngXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uKVUw3gXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uKVUxHgXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ServiceClient" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.1/@serviceClient.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKVUxXgXEeKTboel5B9jCw" x="-1" y="1"/>
+        </children>
+        <element xmi:type="ros:Node" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKHSUXgXEeKTboel5B9jCw" x="158" y="275"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_uKHSV3gXEeKTboel5B9jCw" type="3001" fontName="Lucida Grande">
+        <children xmi:type="notation:DecorationNode" xmi:id="_uKH5YHgXEeKTboel5B9jCw" type="5008"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_uKH5YXgXEeKTboel5B9jCw" type="7002">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_uKH5YngXEeKTboel5B9jCw" showTitle="true"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_uKH5Y3gXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_uKH5ZHgXEeKTboel5B9jCw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uKhiAHgXEeKTboel5B9jCw" type="3005">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uKiJEHgXEeKTboel5B9jCw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uKhiAXgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uKhiAngXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uKhiA3gXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ActionServer" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.2/@actionserver.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKhiBHgXEeKTboel5B9jCw" x="-95" y="-41"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uKiJEXgXEeKTboel5B9jCw" type="3006">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uKiJFngXEeKTboel5B9jCw" type="5005"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uKiJEngXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uKiJE3gXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uKiJFHgXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ActionClient" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.2/@actionclient.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKiJFXgXEeKTboel5B9jCw" x="-1" y="-41"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uKiJF3gXEeKTboel5B9jCw" type="3006">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uKiwIHgXEeKTboel5B9jCw" type="5005"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uKiJGHgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uKiJGXgXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uKiJGngXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ActionClient" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.2/@actionclient.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKiJG3gXEeKTboel5B9jCw" x="1" y="-39"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uKiwIXgXEeKTboel5B9jCw" type="3008">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uKiwJngXEeKTboel5B9jCw" type="5007"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uKiwIngXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uKiwI3gXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uKiwJHgXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ServiceClient" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.2/@serviceClient.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKiwJXgXEeKTboel5B9jCw" x="-1" y="1"/>
+        </children>
+        <element xmi:type="ros:Node" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKHSWHgXEeKTboel5B9jCw" x="599" y="254"/>
+      </children>
+    </children>
+    <element xmi:type="ros:Package" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKAkoXgXEeKTboel5B9jCw" x="588" y="28" height="540"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_uKAkpHgXEeKTboel5B9jCw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uKBLsHgXEeKTboel5B9jCw" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uKBLsXgXEeKTboel5B9jCw" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_uK7xsHgXEeKTboel5B9jCw" type="3001" fontName="Lucida Grande">
+        <children xmi:type="notation:DecorationNode" xmi:id="_uK7xsngXEeKTboel5B9jCw" type="5008"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_uK7xs3gXEeKTboel5B9jCw" type="7002">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_uK7xtHgXEeKTboel5B9jCw" showTitle="true"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_uK7xtXgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_uK7xtngXEeKTboel5B9jCw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uK9m4HgXEeKTboel5B9jCw" type="3007">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uK9m5XgXEeKTboel5B9jCw" type="5006"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uK9m4XgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uK9m4ngXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uK9m43gXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ServiceServer" href="platform:/resource/brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#//@node.0/@serviceServer.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uK9m5HgXEeKTboel5B9jCw" x="239" y="48"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uK-N8HgXEeKTboel5B9jCw" type="3007">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uK-N9XgXEeKTboel5B9jCw" type="5006"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uK-N8XgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uK-N8ngXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uK-N83gXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ServiceServer" href="platform:/resource/brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#//@node.0/@serviceServer.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uK-N9HgXEeKTboel5B9jCw" x="-81" y="41"/>
+        </children>
+        <element xmi:type="ros:Node" href="platform:/resource/brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#//@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uK7xsXgXEeKTboel5B9jCw" x="95" y="25"/>
+      </children>
+    </children>
+    <element xmi:type="ros:Package" href="platform:/resource/brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKAkpXgXEeKTboel5B9jCw" x="168" y="539" width="491" height="351"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_uKBLsngXEeKTboel5B9jCw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uKBLtHgXEeKTboel5B9jCw" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uKBLtXgXEeKTboel5B9jCw" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_uLGw0HgXEeKTboel5B9jCw" type="3001" fontName="Lucida Grande">
+        <children xmi:type="notation:DecorationNode" xmi:id="_uLGw0ngXEeKTboel5B9jCw" type="5008"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_uLGw03gXEeKTboel5B9jCw" type="7002">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_uLGw1HgXEeKTboel5B9jCw" showTitle="true"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_uLGw1XgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_uLGw1ngXEeKTboel5B9jCw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uLRI4HgXEeKTboel5B9jCw" type="3004">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uLRv8HgXEeKTboel5B9jCw" type="5003"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uLRI4XgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uLRI4ngXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uLRI43gXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:Subscriber" href="platform:/resource/brics_showcase_industry_transformer/model/pose_transformer.ros_package#//@node.0/@subscriber.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uLRI5HgXEeKTboel5B9jCw" x="-98" y="125"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uLRv93gXEeKTboel5B9jCw" type="3008">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uLSXA3gXEeKTboel5B9jCw" type="5007"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uLRv-HgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uLSXAHgXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uLSXAXgXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ServiceClient" href="platform:/resource/brics_showcase_industry_transformer/model/pose_transformer.ros_package#//@node.0/@serviceClient.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uLSXAngXEeKTboel5B9jCw" x="239" y="123"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_1wy6YHgYEeKTboel5B9jCw" type="3005">
+          <children xmi:type="notation:DecorationNode" xmi:id="_1wzhcHgYEeKTboel5B9jCw" type="5004"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_1wy6YXgYEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_1wy6YngYEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_1wy6Y3gYEeKTboel5B9jCw"/>
+          <element xmi:type="ros:ActionServer" href="platform:/resource/brics_showcase_industry_transformer/model/pose_transformer.ros_package#//@node.0/@actionserver.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1wy6ZHgYEeKTboel5B9jCw" x="239" y="20"/>
+        </children>
+        <element xmi:type="ros:Node" href="platform:/resource/brics_showcase_industry_transformer/model/pose_transformer.ros_package#//@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uLGw0XgXEeKTboel5B9jCw" x="4" y="34"/>
+      </children>
+    </children>
+    <element xmi:type="ros:Package" href="platform:/resource/brics_showcase_industry_transformer/model/pose_transformer.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKBLs3gXEeKTboel5B9jCw" x="84" y="98" width="463" height="407"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_uKBLtngXEeKTboel5B9jCw" type="2001" fontName="Lucida Grande">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uKBLuHgXEeKTboel5B9jCw" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_uKBywHgXEeKTboel5B9jCw" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_uLekQHgXEeKTboel5B9jCw" type="3001" fontName="Lucida Grande">
+        <children xmi:type="notation:DecorationNode" xmi:id="_uLekQngXEeKTboel5B9jCw" type="5008"/>
+        <children xmi:type="notation:BasicCompartment" xmi:id="_uLekQ3gXEeKTboel5B9jCw" type="7002">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_uLekRHgXEeKTboel5B9jCw" showTitle="true"/>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_uLekRXgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_uLekRngXEeKTboel5B9jCw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_uMDMAHgXEeKTboel5B9jCw" type="3003">
+          <children xmi:type="notation:DecorationNode" xmi:id="_uMDzEHgXEeKTboel5B9jCw" type="5002"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_uMDMAXgXEeKTboel5B9jCw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uMDMAngXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_uMDMA3gXEeKTboel5B9jCw"/>
+          <element xmi:type="ros:Publisher" href="platform:/resource/cognex_insight/model/cognex_insight.ros_package#//@node.0/@publisher.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uMDMBHgXEeKTboel5B9jCw"/>
+        </children>
+        <element xmi:type="ros:Node" href="platform:/resource/cognex_insight/model/cognex_insight.ros_package#//@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uLekQXgXEeKTboel5B9jCw"/>
+      </children>
+    </children>
+    <element xmi:type="ros:Package" href="platform:/resource/cognex_insight/model/cognex_insight.ros_package#/"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uKBLt3gXEeKTboel5B9jCw" x="-399" y="21"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_uHrCUXgXEeKTboel5B9jCw"/>
+  <element xmi:type="ros:Architecture" href="brics_showcase_industry.ros#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_uMMV8HgXEeKTboel5B9jCw" type="4002" source="_uK9m4HgXEeKTboel5B9jCw" target="_uKiwIXgXEeKTboel5B9jCw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_uMM9AHgXEeKTboel5B9jCw" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_uMM9AXgXEeKTboel5B9jCw" x="-24" y="14"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_uMMV8XgXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+    <element xmi:type="ros:Service" href="platform:/resource/brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#//@service.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uMMV8ngXEeKTboel5B9jCw" points="[41, -7, -564, 233]$[605, -7, 0, 233]$[605, -220, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_6i7CEHgXEeKTboel5B9jCw" type="4003" source="_uKUGoHgXEeKTboel5B9jCw" target="_uKJukHgXEeKTboel5B9jCw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_6i7pIHgXEeKTboel5B9jCw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_6i7pIXgXEeKTboel5B9jCw" x="-1" y="27"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_6i7CEXgXEeKTboel5B9jCw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_6i7CEngXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+    <element xmi:type="ros:Action" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@action.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6i7CE3gXEeKTboel5B9jCw" points="[-4, -20, 0, 83]$[-5, -94, -1, 9]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6jAhoHgXEeKTboel5B9jCw" id="(0.49504950495049505,0.775)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_8q2-8HgXEeKTboel5B9jCw" type="4003" source="_uKhiAHgXEeKTboel5B9jCw" target="_uKKVoHgXEeKTboel5B9jCw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_8q2-9HgXEeKTboel5B9jCw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_8q2-9XgXEeKTboel5B9jCw" x="-10" y="26"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_8q2-8XgXEeKTboel5B9jCw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_8q2-8ngXEeKTboel5B9jCw" fontName="Lucida Grande"/>
+    <element xmi:type="ros:Action" href="platform:/resource/brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@action.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8q2-83gXEeKTboel5B9jCw" points="[-15, -21, 60, 73]$[-28, -88, 47, 6]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8q40IHgXEeKTboel5B9jCw" id="(0.17708333333333334,0.525)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_KaND0HgYEeKTboel5B9jCw" type="4002" source="_uK9m4HgXEeKTboel5B9jCw" target="_uKVUwXgXEeKTboel5B9jCw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_KaND03gYEeKTboel5B9jCw" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_KaND1HgYEeKTboel5B9jCw" x="-5" y="24"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_KaND0XgYEeKTboel5B9jCw" fontName="Lucida Grande"/>
+    <element xmi:type="ros:Service" href="platform:/resource/brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#//@service.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KaND0ngYEeKTboel5B9jCw" points="[41, -14, -123, 205]$[148, -48, -16, 171]$[162, -199, -2, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_YKXBAHgYEeKTboel5B9jCw" type="4002" source="_uK-N8HgXEeKTboel5B9jCw" target="_uLRv93gXEeKTboel5B9jCw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_YKXBA3gYEeKTboel5B9jCw" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_YKXBBHgYEeKTboel5B9jCw" y="40"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_YKXBAXgYEeKTboel5B9jCw" fontName="Lucida Grande"/>
+    <element xmi:type="ros:Service" href="platform:/resource/brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#//@service.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YKXBAngYEeKTboel5B9jCw" points="[-8, -1, -234, 330]$[-8, -198, -234, 133]$[191, -311, -35, 20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YKZdQHgYEeKTboel5B9jCw" id="(0.6463414634146342,0.025)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_leDEoHgYEeKTboel5B9jCw" type="4001" source="_uMDMAHgXEeKTboel5B9jCw" target="_uLRI4HgXEeKTboel5B9jCw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_leDrsHgYEeKTboel5B9jCw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_leDrsXgYEeKTboel5B9jCw" x="6" y="13"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_leDEoXgYEeKTboel5B9jCw" fontName="Lucida Grande"/>
+    <element xmi:type="ros:Topic" href="platform:/resource/cognex_insight/model/cognex_insight.ros_package#//@topic.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_leDEongYEeKTboel5B9jCw" points="[15, -3, -117, 23]$[133, -12, 1, 14]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_leJLQHgYEeKTboel5B9jCw" id="(0.7789473684210526,0.55)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_leJLQXgYEeKTboel5B9jCw" id="(0.0707070707070707,0.525)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_31WzIHgYEeKTboel5B9jCw" type="4003" source="_1wy6YHgYEeKTboel5B9jCw" target="_uKKVpngXEeKTboel5B9jCw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_31XaMHgYEeKTboel5B9jCw" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_31XaMXgYEeKTboel5B9jCw" x="4" y="10"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_31WzIXgYEeKTboel5B9jCw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_31WzIngYEeKTboel5B9jCw" fontName="Lucida Grande"/>
+    <element xmi:type="ros:Action" href="platform:/resource/brics_showcase_industry_transformer/model/pose_transformer.ros_package#//@action.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_31WzI3gYEeKTboel5B9jCw" points="[17, -4, -197, 38]$[205, -42, -9, 0]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_31ZPYHgYEeKTboel5B9jCw" id="(0.1717171717171717,0.55)"/>
+  </edges>
+</notation:Diagram>

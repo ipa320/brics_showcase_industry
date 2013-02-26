@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>brics_showcase_industry_worldmodel</name>
+	<name>brics_showcase_industry_coordinators</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -47,7 +47,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.buildLocation</key>
-					<value>/u/aub/git/care-o-bot_ws/brics_showcase_industry/brics_showcase_industry_worldmodel</value>
+					<value>/u/aub/git/care-o-bot_ws/brics_showcase_industry/brics_showcase_industry_coordinators</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
@@ -83,7 +83,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.location</key>
-					<value>/u/aub/git/care-o-bot_ws/brics_showcase_industry/brics_showcase_industry_worldmodel</value>
+					<value>/u/aub/git/care-o-bot_ws/brics_showcase_industry/brics_showcase_industry_coordinators</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>
