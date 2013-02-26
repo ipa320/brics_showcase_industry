@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- YOU NEED TO CHANGE  brics_lbr  NAME TO POINT TO YOUR PACKAGES -->
+
+    <!-- Load robot model into Parameter Server -->
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find brics_lbr)/urdf/lbr.urdf.xacro'" />
+
+    <!-- Start Robot State Publisher (calculates joint frame transforms) -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+    <!-- Start Joint State Publisher with joint control GUI -->
+    <param name="use_gui" value="true" />
+    <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
+
+    <include file="$(find planning_environment)/launch/environment_server.launch">
+        <arg name="use_monitor" value="true" />
+        <arg name="use_collision_map" value="false" />
+    </include>
+
+    <!-- Load planning config from brics_lbr_arm_navigation package -->
+    <rosparam command="load" ns="robot_description_planning" file="$(find brics_lbr_arm_navigation)/config/brics_lbr_planning_description.yaml" />
+
+    <!-- Load arm_kinematics_constraint_aware node configured for your robot, using specific kinematics plugin -->
+    <node pkg="arm_kinematics_constraint_aware" type="arm_kinematics_constraint_aware" name="brics_lbr_manipulator_kinematics" output="screen" >
+        <param name="group" type="string" value="arm"/>
+        <param name="manipulator/root_name" type="string" value="base_link"/>
+        <param name="manipulator/tip_name" type="string" value="arm_7_link"/>
+
+        <!-- KDL is the default plugin, however you can build an IKFast plugin -->
+       
+        <param name="kinematics_solver" type="string" value="brics_lbr_arm_kinematics/IKFastKinematicsPlugin" />
+
+   </node>
+
+</launch> 

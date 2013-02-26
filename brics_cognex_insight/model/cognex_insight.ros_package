@@ -2,12 +2,12 @@
 <ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_cognex_insight" author="Alexander Bubeck" description="Camera Interface to cognex insight smartcam for pattern detection">
   <node name="cognex_insight" loopRate="100.0">
     <publisher name="detected_pattern" msg="geometry_msgs::PoseArray"/>
-    <parameter name="camera_ip" value="169.254.7.197" type="string"/>
+    <parameter name="camera_ip" value="192.168.10.40" type="string"/>
     <parameter name="configuration_port" value="23"/>
     <parameter name="data_port" value="50000"/>
-    <parameter name="Pose1X_Cell" value="['C',50]" type="string"/>
-    <parameter name="Pose1Y_Cell" value="['D',50]" type="string"/>
-    <parameter name="Pose1Theta_Cell" value="['E',50]" type="string"/>
+    <parameter name="Pose1X_Cell" value="['B',28]" type="string"/>
+    <parameter name="Pose1Y_Cell" value="['C',28]" type="string"/>
+    <parameter name="Pose1Theta_Cell" value="['D',28]" type="string"/>
     <parameter name="Pose2X_Cell" value="['C',51]" type="string"/>
     <parameter name="Pose2Y_Cell" value="['D',51]" type="string"/>
     <parameter name="Pose2Theta_Cell" value="['E',51]" type="string"/>
@@ -17,4 +17,7 @@
   </node>
   <depend>geometry_msgs</depend>
   <depend>tf</depend>
+  <topic name="detect_patterns" publisher="//@node.0/@publisher.0">
+    <subscriber href="../../brics_showcase_industry_transformer/model/pose_transformer.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
 </ros:Package>

@@ -13,12 +13,12 @@ from geometry_msgs.msg import PoseArray
 
 
 class cognex_insight_impl:
-	config_camera_ip = "169.254.7.197"
+	config_camera_ip = "192.168.10.40"
 	config_configuration_port = 23
 	config_data_port = 50000
-	config_Pose1X_Cell = "['C',50]"
-	config_Pose1Y_Cell = "['D',50]"
-	config_Pose1Theta_Cell = "['E',50]"
+	config_Pose1X_Cell = "['C',28]"
+	config_Pose1Y_Cell = "['B',28]"
+	config_Pose1Theta_Cell = "['D',28]"
 	config_Pose2X_Cell = "['C',51]"
 	config_Pose2Y_Cell = "['D',51]"
 	config_Pose2Theta_Cell = "['E',51]"
@@ -75,6 +75,8 @@ class cognex_insight_impl:
 	
 	def	update(self):
 		# protected region updateCode on begin #
+		self.out_detected_pattern = PoseArray()
+		
 		mes = self.tnd.read_until("</Cycle>")
 		res = { 0:{}, 1:{}, 2:{}, 3:{} }
 		dom = parseString(mes)
@@ -101,7 +103,7 @@ class cognex_insight_impl:
 			try:
 				val = float(c.getElementsByTagName("Float")[0].childNodes[0].data)
 			except:
-				continue
+				return
 			if c.attributes['Id'].value == p1x:
 				res[0]['x']=val
 			elif c.attributes['Id'].value == p1y:
@@ -136,6 +138,7 @@ class cognex_insight_impl:
 				p.orientation.z = q[2]
 				p.orientation.w = q[3]
 				self.out_detected_pattern.poses.append(p)
+		self.out_detected_pattern.header.stamp = rospy.Time.now()
 		# protected region updateCode end #
 		pass
 		

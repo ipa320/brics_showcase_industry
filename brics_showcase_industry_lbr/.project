@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>brics_showcase_industry_worldmodel</name>
+	<name>brics_showcase_industry_lbr</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -47,7 +47,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.buildLocation</key>
-					<value>/u/aub/git/care-o-bot_ws/brics_showcase_industry/brics_showcase_industry_worldmodel</value>
+					<value>/media/6dd0b056-8d93-4f58-85da-5864b78cf59b/brics_showcase_industry/brics_showcase_industry_lbr</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.useDefaultBuildCmd</key>
@@ -55,7 +55,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.environment</key>
-					<value>VERBOSE=1|ROS_ROOT=/opt/ros/fuerte/share/ros|ROS_PACKAGE_PATH=/u/aub/git/bride_eclipse:/u/aub/git/care-o-bot_ws:/opt/ros/fuerte/share:/opt/ros/fuerte/stacks:/u/aub/brics_software|PYTHONPATH=/opt/ros/fuerte/lib/python2.7/dist-packages:|PATH=/opt/ros/fuerte/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/aub/git/setup:/home/aub/sandbox/android-sdk-linux_x86/platform-tools:/home/aub/sandbox/android-sdk-linux_x86/tools:/home/aub/sandbox/peg-multimarkdown:/u/aub/brics_software/sbin|</value>
+					<value>VERBOSE=1|ROS_ROOT=/opt/ros/fuerte/share/ros|ROS_PACKAGE_PATH=/media/6dd0b056-8d93-4f58-85da-5864b78cf59b:/media/B8F7-B182:/opt/ros/fuerte/share:/opt/ros/fuerte/stacks:/media/B8F7-B182/|PYTHONPATH=/opt/ros/fuerte/lib/python2.7/dist-packages:/opt/ros/fuerte/lib/python2.7/dist-packages:/opt/ros/fuerte/lib/python2.7/dist-packages:|PATH=/opt/ros/fuerte/bin:/opt/ros/fuerte/bin:/opt/ros/fuerte/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/aub/git/setup:/home/aub/sandbox/android-sdk-linux_x86/platform-tools:/home/aub/sandbox/android-sdk-linux_x86/tools:/home/aub/sandbox/peg-multimarkdown:/u/aub/brics_software/sbin|</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.enableFullBuild</key>
@@ -83,7 +83,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.build.location</key>
-					<value>/u/aub/git/care-o-bot_ws/brics_showcase_industry/brics_showcase_industry_worldmodel</value>
+					<value>/media/6dd0b056-8d93-4f58-85da-5864b78cf59b/brics_showcase_industry/brics_showcase_industry_lbr</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.autoBuildTarget</key>

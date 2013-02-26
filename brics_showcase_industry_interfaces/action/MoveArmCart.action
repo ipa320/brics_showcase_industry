@@ -1,0 +1,7 @@
+#goal definition
+geometry_msgs/PoseStamped pose_goal
+---
+#result definition
+int32 successful
+---
+#feedback

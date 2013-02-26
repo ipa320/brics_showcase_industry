@@ -1,0 +1,16 @@
+<package>
+  <description brief="brics_lbr">
+
+     brics_lbr
+
+  </description>
+  <author>Alexander Bubeck</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/brics_lbr</url>
+
+  <depend package="cob_description"/>
+
+</package>
+
+
