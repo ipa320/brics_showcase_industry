@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ros:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_showcase_industry">
-  <packages href="../../brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#/"/>
+  <packages href="../../brics_showcase_industry_coordinators/model/showcase_coordinators.ros_coordinator#/"/>
   <packages href="../../brics_showcase_industry_worldmodel/model/si_worldmodel.ros_package#/"/>
   <packages href="../../brics_showcase_industry_transformer/model/pose_transformer.ros_package#/"/>
   <packages href="../../cognex_insight/model/cognex_insight.ros_package#/"/>
+  <packages href="../../cob_kuka_xmlkrc/model/cob_kuka_xmlkrc.ros_package#/"/>
 </ros:Architecture>

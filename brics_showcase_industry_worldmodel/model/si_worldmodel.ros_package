@@ -6,10 +6,10 @@
   </node>
   <depend>brics_showcase_industry_interfaces</depend>
   <service name="test2" serviceserver="//@node.0/@serviceServer.0">
-    <serviceclient href="../../brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.2/@serviceClient.0"/>
+    <serviceclient href="../../brics_showcase_industry_coordinators/model/showcase_coordinators.ros_coordinator#//@node.2/@serviceClient.0"/>
   </service>
   <service name="test" serviceserver="//@node.0/@serviceServer.0">
-    <serviceclient href="../../brics_showcase_industry_coordinators/model/showcase_coordinators.ros_package#//@node.1/@serviceClient.0"/>
+    <serviceclient href="../../brics_showcase_industry_coordinators/model/showcase_coordinators.ros_coordinator#//@node.1/@serviceClient.0"/>
   </service>
   <service name="setObject" serviceserver="//@node.0/@serviceServer.1">
     <serviceclient href="../../brics_showcase_industry_transformer/model/pose_transformer.ros_package#//@node.0/@serviceClient.0"/>

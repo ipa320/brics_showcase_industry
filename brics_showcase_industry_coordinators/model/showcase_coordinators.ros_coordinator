@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_showcase_industry_coordinators" author="Alexander Bubeck" description="Coordinator components for showcase industry">
+  <node name="coordinator_application">
+    <actionclient name="PickupActionClient"/>
+    <actionclient name="DropActionClient"/>
+    <actionclient name="FindObjectsAction"/>
+    <statetransition Source="//@node.0/@actionclient.2" Target="//@node.0/@actionclient.0"/>
+    <statetransition Source="//@node.0/@actionclient.0" Target="//@node.0/@actionclient.1"/>
+    <statetransition Source="//@node.0/@actionclient.1" Target="//@node.0/@finalStates.0"/>
+    <finalStates/>
+  </node>
+  <node name="coordinator_pickup">
+    <serviceClient name="getObjectPose"/>
+    <actionserver name="PickupActionServer"/>
+    <actionclient name="CLOSE_GRIPPER"/>
+    <actionclient name="MOVE_OVER_BOX"/>
+    <actionclient name="MOVE_DOWN"/>
+    <actionclient name="MOVE_UP"/>
+    <statetransition Source="//@node.1/@serviceClient.0" Target="//@node.1/@actionclient.1"/>
+    <statetransition Source="//@node.1/@actionclient.1" Target="//@node.1/@actionclient.2"/>
+    <statetransition Source="//@node.1/@actionclient.2" Target="//@node.1/@actionclient.0"/>
+    <statetransition Source="//@node.1/@actionclient.0" Target="//@node.1/@actionclient.3"/>
+    <statetransition Source="//@node.1/@actionclient.3" Target="//@node.1/@finalStates.0"/>
+    <statetransition name="aborted" Source="//@node.1/@serviceClient.0" Target="//@node.1/@finalStates.1"/>
+    <finalStates/>
+    <finalStates type="aborted"/>
+  </node>
+  <node name="coordinator_drop">
+    <serviceClient name="getObjectPose"/>
+    <actionserver name="DropActionServer"/>
+    <actionclient name="OPEN_GRIPPER"/>
+    <actionclient name="MOVE_OVER_BOX"/>
+    <actionclient name="MOVE_DOWN"/>
+    <actionclient name="MOVE_UP"/>
+    <statetransition name="aborted" Source="//@node.2/@serviceClient.0" Target="//@node.2/@finalStates.1"/>
+    <statetransition Source="//@node.2/@serviceClient.0" Target="//@node.2/@actionclient.1"/>
+    <statetransition Source="//@node.2/@actionclient.1" Target="//@node.2/@actionclient.2"/>
+    <statetransition Source="//@node.2/@actionclient.2" Target="//@node.2/@actionclient.0"/>
+    <statetransition Source="//@node.2/@actionclient.0" Target="//@node.2/@actionclient.3"/>
+    <statetransition Source="//@node.2/@actionclient.3" Target="//@node.2/@finalStates.0"/>
+    <finalStates/>
+    <finalStates type="aborted"/>
+  </node>
+  <depend>brics_showcase_industry_interfaces</depend>
+  <action name="pick_up" actionserver="//@node.1/@actionserver.0" actionclient="//@node.0/@actionclient.0"/>
+  <action name="drop_down" actionserver="//@node.2/@actionserver.0" actionclient="//@node.0/@actionclient.1"/>
+</ros:Package>
