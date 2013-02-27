@@ -1,0 +1,4 @@
+<launch>
+    <param name="robot_description" textfile="$(find brics_lbr)/urdf/lbr.urdf" />
+    <rosparam command="load" ns="robot_description_planning" file="$(find brics_lbr_arm_navigation)/config/brics_lbr_planning_description.yaml" />
+</launch>

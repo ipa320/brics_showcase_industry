@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_showcase_industry_lbr" author="Alexander Bubeck" license="">
+  <node name="brics_lbr">
+    <serviceClient name="/arm_kinematics/get_ik" msg="kinematics_msgs::GetPositionIK"/>
+    <actionserver name="MoveArmCart" ActionType="brics_showcase_industry_interfaces::MoveArmCartAction"/>
+    <actionclient name="FollowJointTrajectory"/>
+  </node>
+  <depend>brics_showcase_industry_interfaces</depend>
+  <depend>kinematics_msgs</depend>
+  <depend>control_msgs</depend>
+</ros:Package>
