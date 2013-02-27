@@ -1,0 +1,3 @@
+[submodule "cob_industrial"]
+	path = cob_industrial
+	url = git://github.com/abubeck/cob_industrial.git

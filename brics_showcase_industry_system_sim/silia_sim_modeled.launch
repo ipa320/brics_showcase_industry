@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+s
+    <rosparam command="load" ns="/script_server/arm" file="$(find cob_silia)/config/arm_joint_configurations.yaml"/>
+
+	<!-- start empty world -->
+    <node name="gazebo" pkg="gazebo" type="gazebo" args="$(find cob_gazebo_worlds)/worlds/empty.world" respawn="false" output="screen"/>
+
+    <node name="gazebo_gui" pkg="gazebo" type="gui" respawn="false" output="screen"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find cob_silia)/urdf/silia.urdf.xacro'" />s
+
+	<!-- push robot_description to factory and spawn robot in gazebo -->
+	<node name="spawn_gazebo_model" pkg="gazebo" type="spawn_model" args="-urdf -param robot_description -model silia -z 0.1 " respawn="false" output="screen" />
+
+	<rosparam file="$(find kuka_controller_configuration_gazebo)/ros/controller/arm_controller_kr16.yaml" command="load"/>
+
+    <node name="arm_controller_spawner" pkg="pr2_controller_manager" type="spawner" args="arm_controller" />
+    
+    <node name="arm_joint_trajectory_action_node" pkg="joint_trajectory_action" type="joint_trajectory_action" ns="arm_controller" />
+	
+  	<node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+    	<param name="publish_frequency" type="double" value="50.0" />
+    	<param name="tf_prefix" type="string" value="" />
+  	</node>
+
+</launch>
