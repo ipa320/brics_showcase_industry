@@ -12,14 +12,15 @@ rospy.sleep(1.0)
 
 ps = PoseStamped()
 ps.header.stamp = rospy.Time.now()
-ps.pose.position.x = 0.171
-ps.pose.position.y = -0.541
-ps.pose.position.z = 0.271
+ps.header.frame_id = "base_link"
+ps.pose.position.x = 0.9
+ps.pose.position.y = -0.5
+ps.pose.position.z = 1.3
 
-ps.pose.orientation.x = 0.374
-ps.pose.orientation.y = 0.927
-ps.pose.orientation.z = -0.014
-ps.pose.orientation.w = 0.004
+ps.pose.orientation.x = -0.007495
+ps.pose.orientation.y = -0.011300
+ps.pose.orientation.z = 0.887137
+ps.pose.orientation.w = 0.461307
 
 print "Creating client"
 client = actionlib.SimpleActionClient("/MoveArmCartAction", MoveArmCartAction)

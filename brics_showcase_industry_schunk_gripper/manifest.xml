@@ -1,0 +1,19 @@
+<package>
+  <description brief="brics_showcase_industry_schunk_gripper"></description>
+  <author>Alexander Bubeck</author>
+  <license></license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+  <depend package="roscpp"/>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="dynamic_reconfigure"/>
+  	<depend package="brics_showcase_industry_interfaces"/>
+  	<depend package="schunk_libm5api"/>
+  /* protected region additional manifest statements on begin */
+  /* protected region additional manifest statements end */
+  
+  
+</package>
+
+
