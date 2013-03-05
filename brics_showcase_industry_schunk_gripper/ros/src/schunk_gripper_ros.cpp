@@ -43,7 +43,7 @@ class schunk_gripper_ros
         
   	
 
-				n_.param("dev_string", component_config_.dev_string, (std::string)"/dev/pcan0");
+				n_.param("dev_string", component_config_.dev_string, (std::string)"/dev/pcan32");
 				n_.param("open_pos", component_config_.open_pos, (double)1.0);
 				n_.param("close_pos", component_config_.close_pos, (double)1.0);
 				n_.param("baudrate", component_config_.baudrate, (int)1000);

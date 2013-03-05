@@ -64,13 +64,13 @@ public:
     	}
     	PCube_resetAll(m_dev);
     	PCube_homeAll(m_dev);
-    	int nr_of_modules=PCube_getModuleCount(m_dev);
+    	int nr_of_modules=1;//PCube_getModuleCount(m_dev);
     	std::cout <<"Nr of modules available: " << nr_of_modules << "\n";
     	if(nr_of_modules <= 0)
     	{
     		std::cerr<<"No modules found."<<"\n";
     	    PCube_closeDevice(m_dev);
-    	    return;
+    	    //return;
     	}
     	unsigned long module_state;
     	for(int i=0;i<nr_of_modules;i++)
@@ -78,26 +78,29 @@ public:
     		PCube_getModuleState(m_dev,i,&module_state);
     	    std::cout<<"State of module "<<i<<": "<<module_state<<"\n";
     	}
-    	ret = PCube_getMinPos(m_dev,config.modul_id,&min_pos);
-    	if (ret != 0)
-    	{
+	while (PCube_getMinPos(m_dev,config.modul_id,&min_pos) != 0)
+	{
+		usleep(1000);
     		std::cerr << "Could not get minimum position for module nr:"<<config.modul_id <<", error: "<< ret << "\n";
-    	    PCube_closeDevice(m_dev);
-    	    return;
+    	    //PCube_closeDevice(m_dev);
+    	    //return;
+	    usleep(1000);
     	}
-    	ret = PCube_getMaxPos(m_dev,config.modul_id,&max_pos);
-    	if (ret != 0)
-    	{
-    		std::cerr << "Could not get maximum position for module nr:"<<config.modul_id <<", error: "<< ret << "\n";
-    	    PCube_closeDevice(m_dev);
-    	    return;
+
+    	while (PCube_getMaxPos(m_dev,config.modul_id,&max_pos) != 0)
+	{
+	    std::cerr << "Could not get maximum position for module nr:"<<config.modul_id <<", error: "<< ret << "\n";
+    	    //PCube_closeDevice(m_dev);
+    	    //return;
+	    usleep(1000);
     	}
-    	ret = PCube_setMaxVel(m_dev,config.modul_id,config.speed);
-    	if (ret != 0)
-    	{
-    		std::cerr << "Could not set maximum velocity for module nr:"<<config.modul_id <<", error: "<< ret << "\n";
-    	    PCube_closeDevice(m_dev);
-    	    return;
+
+    	while (PCube_setMaxVel(m_dev,config.modul_id,config.speed) != 0)
+	{
+        	std::cerr << "Could not set maximum velocity for module nr:"<<config.modul_id <<", error: "<< ret << "\n";
+    	    //PCube_closeDevice(m_dev);
+    	    //return;
+    	    usleep(1000);
     	}
 		/* protected region user configure end */
     }
@@ -110,6 +113,7 @@ public:
 	bool callback_MoveGripper(brics_showcase_industry_interfaces::MoveGripper::Request  &req, brics_showcase_industry_interfaces::MoveGripper::Response &res , schunk_gripper_config config)
 	{
 		/* protected region user implementation of service callback for MoveGripper on begin */
+		std::cout << "MoveGripper service called" << std::endl;
 		if(req.open == 0) //closing gripper
 		{
 			PCube_haltModule(m_dev,config.modul_id);
