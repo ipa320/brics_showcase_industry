@@ -6,6 +6,8 @@ import rospy
 import actionlib
 from kinematics_msgs.srv import *
 from brics_showcase_industry_interfaces.msg import MoveArmCartFeedback, MoveArmCartResult, MoveArmCartGoal, MoveArmCartAction
+from trajectory_msgs.msg import *
+from control_msgs.msg import *
 # protected region customHeaders end #
 
 
@@ -14,7 +16,8 @@ class brics_lbr_impl:
 	
 	def	__init__(self):
 		# protected region initCode on begin #
-		self.iks = rospy.ServiceProxy('/brics_lbr_manipulator_kinematics/get_ik', GetPositionIK)
+		self.iks = rospy.ServiceProxy('/silia_manipulator_kinematics/get_ik', GetPositionIK)
+		self.client = actionlib.SimpleActionClient("/arm_controller/follow_joint_trajectory", FollowJointTrajectoryAction)
 		# protected region initCode end #
 		pass
 	
@@ -30,11 +33,11 @@ class brics_lbr_impl:
 
 	def callIKSolver(self, current_pose, goal_pose):
 		req = GetPositionIKRequest()
-		req.ik_request.ik_link_name = "arm_7_link"
-		req.ik_request.ik_seed_state.joint_state.name = ["arm_1_joint", "arm_2_joint", "arm_3_joint", "arm_4_joint", "arm_5_joint", "arm_6_joint", "arm_7_joint"]
-		req.ik_request.ik_seed_state.joint_state.position = [1.6709238446531316, -0.5833843260358791, -0.12776269037614987, 1.5215870872165453, 0.06922124107569527, -1.0151217594035722, -0.5440534363961883]
+		req.ik_request.ik_link_name = "arm_6_link"
+		req.ik_request.ik_seed_state.joint_state.name = ["arm_1_joint", "arm_2_joint", "arm_3_joint", "arm_4_joint", "arm_5_joint", "arm_6_joint"]
+		req.ik_request.ik_seed_state.joint_state.position = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 		req.ik_request.pose_stamped = goal_pose
-		req.timeout = rospy.Duration(1.0)
+		req.timeout = rospy.Duration(10.0)
 		resp = self.iks(req)
 		result = []
 		for o in resp.solution.joint_state.position:
@@ -47,7 +50,7 @@ class brics_lbr_impl:
 		# protected region updateCode on begin #
 
 		print "Received MoveArmCartAction for ", goal.pose_goal
-		(grasp_conf, error_code) = self.callIKSolver([1.6709238446531316, -0.5833843260358791, -0.12776269037614987, 1.5215870872165453, 0.06922124107569527, -1.0151217594035722, -0.5440534363961883], goal.pose_goal)		
+		(grasp_conf, error_code) = self.callIKSolver([0.0, 0.0, 0.0, 0.0, 0.0, 0.0], goal.pose_goal)		
 		if(error_code.val != error_code.SUCCESS):
 			rospy.logerr("Ik grasp Failed")
 			print error_code
@@ -55,7 +58,7 @@ class brics_lbr_impl:
 			return 'failed'
 		# convert to ROS trajectory message
 		print "Received IK result: ", grasp_conf
-		joint_names = ["arm_1_joint", "arm_2_joint", "arm_3_joint", "arm_4_joint", "arm_5_joint", "arm_6_joint", "arm_7_joint"]
+		joint_names = ["arm_1_joint", "arm_2_joint", "arm_3_joint", "arm_4_joint", "arm_5_joint", "arm_6_joint"]
 		traj_msg = JointTrajectory()
 		traj_msg.header.stamp = rospy.Time.now()+rospy.Duration(0.5)
 		traj_msg.joint_names = joint_names
@@ -65,14 +68,16 @@ class brics_lbr_impl:
 		point_msg.time_from_start=rospy.Duration(3) # this value is set to 3 sec per point. \todo TODO: read from parameter
 		traj_msg.points.append(point_msg)
 		# sending goal
-		client = actionlib.SimpleActionClient("/arm_controller/follow_joint_trajectory", FollowJointTrajectoryAction)
 		client_goal = FollowJointTrajectoryGoal()
 		client_goal.trajectory = traj_msg
 		#print client_goal
-		client.send_goal(client_goal)
-		client.wait_for_result()
+		print "Sending Trajectory"
+		self.client.send_goal(client_goal)
+		self.client.wait_for_result()
+		print "Finished movement"
 		self._as.set_succeeded(_MoveArmCart_result)
-
+		print "Finished overall"
+		
 		# protected region updateCode end #
 		pass
 		
