@@ -4,6 +4,8 @@
 
 /* protected region user include files on begin */
 #include <schunk_libm5api/m5apiw32.h>
+#include <sstream>
+using namespace std;
 /* protected region user include files end */
 
 class schunk_gripper_config
@@ -34,8 +36,8 @@ class schunk_gripper_impl
 {
 	/* protected region user member variables on begin */
 	int m_dev;
-	double max_pos;
-	double min_pos;
+	float max_pos;
+	float min_pos;
 	/* protected region user member variables end */
 
 public:
@@ -58,7 +60,7 @@ public:
     	if (ret != 0)
     	{
     	      std::cerr << "Could not open device, m5api error code: "<< ret << "\n";
-    	      return false;
+    	      return;
     	}
     	PCube_resetAll(m_dev);
     	PCube_homeAll(m_dev);
@@ -68,7 +70,7 @@ public:
     	{
     		std::cerr<<"No modules found."<<"\n";
     	    PCube_closeDevice(m_dev);
-    	    return false;
+    	    return;
     	}
     	unsigned long module_state;
     	for(int i=0;i<nr_of_modules;i++)
@@ -81,21 +83,21 @@ public:
     	{
     		std::cerr << "Could not get minimum position for module nr:"<<config.modul_id <<", error: "<< ret << "\n";
     	    PCube_closeDevice(m_dev);
-    	    return false;
+    	    return;
     	}
     	ret = PCube_getMaxPos(m_dev,config.modul_id,&max_pos);
     	if (ret != 0)
     	{
     		std::cerr << "Could not get maximum position for module nr:"<<config.modul_id <<", error: "<< ret << "\n";
     	    PCube_closeDevice(m_dev);
-    	    return false;
+    	    return;
     	}
     	ret = PCube_setMaxVel(m_dev,config.modul_id,config.speed);
     	if (ret != 0)
     	{
-    		std::cerr << "Could not set maximum velocity for module nr:"<<config.modul_id <<", error: "<< ret << endlog();
+    		std::cerr << "Could not set maximum velocity for module nr:"<<config.modul_id <<", error: "<< ret << "\n";
     	    PCube_closeDevice(m_dev);
-    	    return false;
+    	    return;
     	}
 		/* protected region user configure end */
     }
@@ -108,7 +110,7 @@ public:
 	bool callback_MoveGripper(brics_showcase_industry_interfaces::MoveGripper::Request  &req, brics_showcase_industry_interfaces::MoveGripper::Response &res , schunk_gripper_config config)
 	{
 		/* protected region user implementation of service callback for MoveGripper on begin */
-		if(req->open == 0) //closing gripper
+		if(req.open == 0) //closing gripper
 		{
 			PCube_haltModule(m_dev,config.modul_id);
 			PCube_resetModule(m_dev,config.modul_id);
@@ -116,7 +118,7 @@ public:
 				return false;
 			return true;
 		}
-		if(req->open == 1) //opening gripper
+		if(req.open == 1) //opening gripper
 		{
 			PCube_haltModule(m_dev,config.modul_id);
 			PCube_resetModule(m_dev,config.modul_id);
