@@ -10,5 +10,5 @@
     <parameter name="speed" value="0.01" type="double"/>
   </node>
   <depend>brics_showcase_industry_interfaces</depend>
-  <depend>libpcan</depend>
+  <depend>schunk_libm5api</depend>
 </ros:Package>

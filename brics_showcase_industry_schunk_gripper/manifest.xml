@@ -9,7 +9,7 @@
   <depend package="rospy"/>
   <depend package="dynamic_reconfigure"/>
   	<depend package="brics_showcase_industry_interfaces"/>
-  	<depend package="libpcan"/>
+  	<depend package="schunk_libm5api"/>
   /* protected region additional manifest statements on begin */
   /* protected region additional manifest statements end */
   
