@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_showcase_industry_schunk_gripper" author="Alexander Bubeck">
+  <node name="schunk_gripper">
+    <serviceServer name="MoveGripper" msg="brics_showcase_industry_interfaces::MoveGripper"/>
+    <parameter name="dev_string" value="/dev/pcan0" type="string"/>
+    <parameter name="open_pos" value="1.0" type="double"/>
+    <parameter name="close_pos" value="1.0" type="double"/>
+    <parameter name="baudrate" value="1000" type="int"/>
+    <parameter name="modul_id" value="12" type="int"/>
+    <parameter name="speed" value="0.01" type="double"/>
+  </node>
+  <depend>brics_showcase_industry_interfaces</depend>
+  <depend>libpcan</depend>
+</ros:Package>
