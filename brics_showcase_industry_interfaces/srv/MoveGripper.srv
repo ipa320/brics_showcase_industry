@@ -1,0 +1,3 @@
+# open = 1 is openned open = 0 is closed
+int open
+---
